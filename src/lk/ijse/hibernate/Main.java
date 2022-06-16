@@ -13,6 +13,10 @@ public class Main {
         Customer customer2 = new Customer("C002", "sandali", "colombo", "076 2546321");
         Customer customer3 = new Customer("C003", "abeywickrama", " kaluthara", "076 2587463");
 
+        Item item1 = new Item("I001", "ice cream", 160, 500);
+        Item item2 = new Item("I002", "coca-cola", 195, 250);
+        Item item3 = new Item("I003", "soda", 180, 600);
+
         Session session = FactoryConfiguration.getInstance().getSession();
 
         Transaction transaction = session.beginTransaction();
