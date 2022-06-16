@@ -53,6 +53,44 @@ public class Main {
 
         Transaction transaction = session.beginTransaction();
 
+        ion();
+
+
+//---------------------------------Customer----------------------------------------------------------------------------------
+
+
+/** ===Create Customer====  */
+
+
+
+
+        session.save(customer1);
+        session.save(customer2);
+        session.save(customer3);
+
+
+/** ===Read Customer====  */
+
+
+        Customer c001 = session.get(Customer.class, "C001");
+        Customer c002 = session.get(Customer.class, "C002");
+
+        System.out.println(c001);
+        System.out.println(c002);
+
+
+/** ===Update Customer====  */
+
+
+        customer1.setCustomer_address("candy");
+        session.update(customer1);
+
+
+/** ===Delete Customer====  */
+
+
+        session.delete(session.get(Customer.class,"C003"));
+
 
 
         transaction.commit();
