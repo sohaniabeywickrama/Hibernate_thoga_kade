@@ -127,6 +127,40 @@ public class Main {
 
         session.delete(session.get(Item.class,"I003"));
 
+//---------------------------------Order----------------------------------------------------------------------------------
+
+
+/** ===Create Order====  */
+
+
+
+        session.save(order1);
+        session.save(order2);
+        session.save(order3);
+        session.save(order4);
+
+
+/** ===Read Order====  */
+
+
+
+        Orders orders = session.get(Orders.class, "OR-001");
+
+        System.out.println(orders);
+
+
+/** ===Update Order====  */
+
+
+        order1.setOrder_customer(customer2);
+        session.update(order1);
+
+
+/** ===Delete Order====  */
+
+
+        session.delete(session.get(Orders.class,"OR-003"));
+
 
 
         transaction.commit();
