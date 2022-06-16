@@ -91,6 +91,42 @@ public class Main {
 
         session.delete(session.get(Customer.class,"C003"));
 
+//---------------------------------Item----------------------------------------------------------------------------------
+
+
+/** ===Create Item====  */
+
+
+
+
+        session.save(item1);
+        session.save(item2);
+        session.save(item3);
+
+
+/** ===Read Item====  */
+
+
+        Item i001 = session.get(Item.class, "I001");
+        Item i002 = session.get(Item.class, "I002");
+
+        System.out.println(i001);
+        System.out.println(i002);
+
+
+/** ===Update Item====  */
+
+
+        item3.setItem_qty(170);
+
+        session.update(item3);
+
+
+/** ===Delete Item====  */
+
+
+        session.delete(session.get(Item.class,"I003"));
+
 
 
         transaction.commit();
