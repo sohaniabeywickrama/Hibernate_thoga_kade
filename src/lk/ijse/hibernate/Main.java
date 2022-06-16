@@ -161,6 +161,43 @@ public class Main {
 
         session.delete(session.get(Orders.class,"OR-003"));
 
+//---------------------------------OrderDetail----------------------------------------------------------------------------------
+
+
+/** ===Create OrderDetail====  */
+
+
+
+
+        session.save(orderDetail1);
+        session.save(orderDetail2);
+        session.save(orderDetail3);
+        session.save(orderDetail4);
+        session.save(orderDetail5);
+        session.save(orderDetail6);
+
+
+/** ===Read OrderDetail====  */
+
+
+        OrderDetail orderDetail = session.get(OrderDetail.class, "OD-005");
+
+        System.out.println(orderDetail);
+
+
+/** ===Update OrderDetail====  */
+
+
+        orderDetail1.setOderDetail_qtyOnHand(3);
+        session.update(orderDetail1);
+
+
+/** ===Delete OrderDetail====  */
+
+
+        session.delete(session.get(OrderDetail.class,"OD-005"));
+
+//---------------------------------------------------------------------------------------------------------------------------------------------
 
 
         transaction.commit();
